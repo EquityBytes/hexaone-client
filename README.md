@@ -51,4 +51,4 @@ Success Code|Message|Description
 
 ## More
 
-For more information [join our Discord](https://discord.gg/PFBDVzNW)
+For more information [join their Discord](https://discord.gg/PFBDVzNW)
