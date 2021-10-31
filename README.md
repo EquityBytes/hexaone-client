@@ -32,7 +32,7 @@ setImmediate(async () => {
 });
 
 /* OR */
-api.getPrices(578080).then(({ status, data: { prices } }) => {
+client.getPrices(578080).then(({ status, data: { prices } }) => {
   const count = Object.keys(prices).length;
 
   console.log(`${status} - ${count} item prices`);
