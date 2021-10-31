@@ -51,4 +51,4 @@ Success Code|Message|Description
 
 ## More
 
-For more information visit [HEXA.ONE](https://hexa.one)
+For more information [join our Discord](https://discord.gg/PFBDVzNW)
