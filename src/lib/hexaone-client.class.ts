@@ -86,7 +86,7 @@ export class HexaoneClient {
    * @memberof HexaoneClient
    */
   public getListings(appId: number | string) {
-    return this.axiosRef.get<GetListingsResponse>(`/market/prices/${appId}`);
+    return this.axiosRef.get<GetListingsResponse>(`/market/listings/${appId}`);
   }
 
   /**
