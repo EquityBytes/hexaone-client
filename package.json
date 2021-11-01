@@ -18,6 +18,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
+    "test": "HEXAONE_APIKEY=<YOUR API_KEY HERE> jest",
     "prebuild": "rimraf -f dist",
     "build": "tsc",
     "pack": "npm run build && npm pack"
@@ -27,8 +28,6 @@
   },
   "devDependencies": {
     "@types/jest": "^27.0.2",
-    "eslint": "^8.1.0",
-    "eslint-config-prettier": "^8.3.0",
     "jest": "^27.3.1",
     "prettier": "^2.4.1",
     "rimraf": "^3.0.2",
