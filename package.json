@@ -18,7 +18,7 @@
   "scripts": {
     "build": "tsc && cp README.md LICENSE package.json dist"
   },
-  "peerDependencies": {
+  "dependencies": {
     "axios": "^0.24.0"
   },
   "devDependencies": {
