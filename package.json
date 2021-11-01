@@ -9,7 +9,7 @@
     "url": "git+https://github.com/RamboTrades/hexaone-client.git"
   },
   "bugs": {
-    "url": "https://github.com/yaneony/hexaone-npm/issues"
+    "url": "https://github.com/RamboTrades/hexaone-client/issues"
   },
   "homepage": "https://rambotrades.com",
   "main": "./src/index.js",
