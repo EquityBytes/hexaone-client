@@ -40,7 +40,7 @@ async function main() {
 
 ## Error Codes
 
-| Success Code | Message               | Description                                |
+| Status Code | Message               | Description                                |
 | ------------ | --------------------- | ------------------------------------------ |
 | 200          | OK                    | The request was received successfully.     |
 | 401          | Unauthorized          | Authorization failed.                      |
