@@ -45,6 +45,7 @@ Success Code|Message|Description
 ---|---|---
 200|OK|The request was received successfully.
 401|Unauthorized|Authorization failed.
+402|Payment Required|Unsufficient balance.
 403|Forbidden|Steam privacy settings forbid this action.
 404|Not Found|The endpoint doesn't exist.
 500|Internal Server Error|The service is having issues.
