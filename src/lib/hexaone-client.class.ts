@@ -119,7 +119,7 @@ export class HexaoneClient {
    * @param {string} steamId64 - Steam ID in SID64 format (e.g. 76561198061661326)
    * @param {string} appId - Steam app id (e.g. 730 for CS:GO)
    * @param {string} contextId - Steam Inventory context (e.g. 2 for CS:GO)
-   * @return {GetProfileResponse}
+   * @return {GetInventoryResponse}
    * @memberof HexaoneClient
    */
   public getInventory(
