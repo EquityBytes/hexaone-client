@@ -1,5 +1,11 @@
-# Add files here to ignore them from prettier formatting
-
+# compiled output
 /dist
-/node_modules
-/coverage
+
+# dependencies
+node_modules
+
+# System Files
+.DS_Store
+
+# Dotenv
+.env

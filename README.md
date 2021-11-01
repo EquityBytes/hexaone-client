@@ -17,10 +17,15 @@ $ npm i @rambotrades/hexaone-client
 > :warning: **Disclaimer**: In order to use any available endpoint by [HEXA.ONE](https://hexa.one) you will need a personal `{API_KEY}`
 
 ```javascript
-const HexaoneClient = require('@rambotrades/hexaone-client');
-const client = new HexaoneClient('API_KEY'); // <- Put your API_KEY here.
+import { HexaoneClient } from '@rambotrades/hexaone-client';
+```
 
-setImmediate(async () => {
+```javascript
+const client = new HexaoneClient('API_KEY'); // <- Put your API_KEY here.
+```
+
+```javascript
+async function main() {
   const {
     status,
     data: { prices },
@@ -29,26 +34,19 @@ setImmediate(async () => {
   const count = Object.keys(prices).length;
 
   console.log(`${status} - ${count} item prices`);
-});
-
-/* OR */
-client.getPrices(578080).then(({ status, data: { prices } }) => {
-  const count = Object.keys(prices).length;
-
-  console.log(`${status} - ${count} item prices`);
-});
+}
 ```
 
 ## Error Codes
 
-Success Code|Message|Description
----|---|---
-200|OK|The request was received successfully.
-401|Unauthorized|Authorization failed.
-402|Payment Required|Unsufficient balance.
-403|Forbidden|Steam privacy settings forbid this action.
-404|Not Found|The endpoint doesn't exist.
-500|Internal Server Error|The service is having issues.
+| Success Code | Message               | Description                                |
+| ------------ | --------------------- | ------------------------------------------ |
+| 200          | OK                    | The request was received successfully.     |
+| 401          | Unauthorized          | Authorization failed.                      |
+| 402          | Payment Required      | Unsufficient balance.                      |
+| 403          | Forbidden             | Steam privacy settings forbid this action. |
+| 404          | Not Found             | The endpoint doesn't exist.                |
+| 500          | Internal Server Error | The service is having issues.              |
 
 ## More
 
