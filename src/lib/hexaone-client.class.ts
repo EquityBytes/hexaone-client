@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
 import {
   GetAccountResponse,
@@ -27,8 +27,8 @@ export class HexaoneClient {
    * @return {GetAccountResponse}
    * @memberof HexaoneClient
    */
-  public getAccount() {
-    return this.axiosRef.get<GetAccountResponse>('/api/account');
+  public getAccount(config?: AxiosRequestConfig) {
+    return this.axiosRef.get<GetAccountResponse>('/api/account', config);
   }
 
   /**
@@ -37,8 +37,8 @@ export class HexaoneClient {
    * @return {GetAccessLogResponse}
    * @memberof HexaoneClient
    */
-  public getAccessLog() {
-    return this.axiosRef.get<GetAccessLogResponse>('/api/access');
+  public getAccessLog(config?: AxiosRequestConfig) {
+    return this.axiosRef.get<GetAccessLogResponse>('/api/access', config);
   }
 
   /**
@@ -48,9 +48,10 @@ export class HexaoneClient {
    * @return {GetCurrenciesResponse}
    * @memberof HexaoneClient
    */
-  public getCurrencies(code: string) {
+  public getCurrencies(code: string, config?: AxiosRequestConfig) {
     const test = this.axiosRef.get<GetCurrenciesResponse>(
-      `/market/currencies${code && `/${code}`}`
+      `/market/currencies${code && `/${code}`}`,
+      config
     );
 
     return test;
@@ -63,8 +64,11 @@ export class HexaoneClient {
    * @return {GetItemsResponse}
    * @memberof HexaoneClient
    */
-  public getItems(appId: number | string) {
-    return this.axiosRef.get<GetItemsResponse>(`/market/items/${appId}`);
+  public getItems(appId: number | string, config?: AxiosRequestConfig) {
+    return this.axiosRef.get<GetItemsResponse>(
+      `/market/items/${appId}`,
+      config
+    );
   }
 
   /**
@@ -74,8 +78,11 @@ export class HexaoneClient {
    * @return {GetPricesResponse}
    * @memberof HexaoneClient
    */
-  public getPrices(appId: number | string) {
-    return this.axiosRef.get<GetPricesResponse>(`/market/prices/${appId}`);
+  public getPrices(appId: number | string, config?: AxiosRequestConfig) {
+    return this.axiosRef.get<GetPricesResponse>(
+      `/market/prices/${appId}`,
+      config
+    );
   }
 
   /**
@@ -85,8 +92,11 @@ export class HexaoneClient {
    * @return {GetListingsResponse}
    * @memberof HexaoneClient
    */
-  public getListings(appId: number | string) {
-    return this.axiosRef.get<GetListingsResponse>(`/market/listings/${appId}`);
+  public getListings(appId: number | string, config?: AxiosRequestConfig) {
+    return this.axiosRef.get<GetListingsResponse>(
+      `/market/listings/${appId}`,
+      config
+    );
   }
 
   /**
@@ -96,8 +106,11 @@ export class HexaoneClient {
    * @return {GetProfileResponse}
    * @memberof HexaoneClient
    */
-  public getProfile(steamId64: string) {
-    return this.axiosRef.get<GetProfileResponse>(`/user/profile/${steamId64}`);
+  public getProfile(steamId64: string, config?: AxiosRequestConfig) {
+    return this.axiosRef.get<GetProfileResponse>(
+      `/user/profile/${steamId64}`,
+      config
+    );
   }
 
   /**
@@ -112,10 +125,12 @@ export class HexaoneClient {
   public getInventory(
     steamId64: string,
     appId: number | string,
-    contextId: number | string
+    contextId: number | string,
+    config?: AxiosRequestConfig
   ) {
     return this.axiosRef.get<GetInventoryResponse>(
-      `/user/inventory/${steamId64}/${appId}/${contextId}`
+      `/user/inventory/${steamId64}/${appId}/${contextId}`,
+      config
     );
   }
 }
